@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" href="/favicon.ico" />
+  <meta name="theme-color" content="#4647ae" />
+
+
+  <!-- SEO Meta Tags -->
+  <title>KenVano | CandraSP - Web & Desktop App Developer Portfolio</title>
+  <meta name="description"
+    content="Portfolio of CandraSP (KenVano), an expert web and desktop application developer with over 9 years of experience. Building fast, scalable, and secure applications." />
+  <meta name="keywords"
+    content="CandraSP, KenVano, Web Development, Desktop App Development, Tailwind CSS v4, Portfolio, Developer, Indonesia" />
+  <meta name="author" content="CandraSP" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- EmailJS CDN -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init({
+        publicKey: "8jwZU9S8RgxGLxVlc",
+      });
+    })();
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+
+<body class="bg-[#0b0d19] text-gray-100 font-sans selection:bg-accent-blue selection:text-white antialiased">
+  <!-- Background Glows -->
+  <div
+    class="absolute top-0 left-1/4 w-96 h-96 bg-primary-dark/20 rounded-full blur-[120px] pointer-events-none -z-10 animate-pulse-slow">
+  </div>
+  <div
+    class="absolute top-1/3 right-1/4 w-80 h-80 bg-brand-purple/10 rounded-full blur-[100px] pointer-events-none -z-10">
+  </div>
+  <div
+    class="absolute bottom-1/4 left-1/3 w-[500px] h-[500px] bg-accent-blue/5 rounded-full blur-[150px] pointer-events-none -z-10 animate-pulse-slow">
+  </div>
+
+  <!-- Header / Navbar -->
+  <header class="fixed top-0 left-0 w-full z-50 glass-nav transition-all duration-300" id="navbar">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#home" class="flex items-center gap-3 group" aria-label="KenVano Home">
+        <!-- SVG Developer Logo Mark -->
+        <div class="relative w-10 h-10 group-hover:scale-105 transition-transform duration-300">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full drop-shadow-lg">
+            <defs>
+              <linearGradient id="logoGrad" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#4647ae"/>
+                <stop offset="100%" stop-color="#4382df"/>
+              </linearGradient>
+              <linearGradient id="logoGradLight" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#6468cc"/>
+                <stop offset="100%" stop-color="#6ba3f5"/>
+              </linearGradient>
+            </defs>
+            <!-- Background rounded square -->
+            <rect width="40" height="40" rx="10" fill="url(#logoGrad)"/>
+            <!-- Left bracket < -->
+            <path d="M10 20 L16 14 L16 16.5 L13 20 L16 23.5 L16 26 Z" fill="white" opacity="0.9"/>
+            <!-- Right bracket > -->
+            <path d="M30 20 L24 14 L24 16.5 L27 20 L24 23.5 L24 26 Z" fill="white" opacity="0.9"/>
+            <!-- Forward slash / in center -->
+            <line x1="22" y1="13" x2="18" y2="27" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.75"/>
+          </svg>
+        </div>
+        <span class="font-display font-bold text-xl tracking-wide bg-linear-to-r from-white via-light-sky to-accent-blue bg-clip-text text-transparent">KenVano</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="#home"
+          class="text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200">Home</a>
+        <a href="#about"
+          class="text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200">About</a>
+        <a href="#services"
+          class="text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200">Services</a>
+        <a href="#portfolio"
+          class="text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200">Portfolio</a>
+        <a href="#contact"
+          class="text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200">Contact</a>
+      </nav>
+
+      <!-- CTA Action -->
+      <div class="hidden md:flex items-center gap-4">
+        <a href="https://github.com/candrasp" target="_blank" rel="noopener noreferrer"
+          class="p-2 text-gray-400 hover:text-white transition-colors duration-200" aria-label="GitHub">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+            <path
+              d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+            <path d="M9 18c-4.51 2-5-2-7-2" />
+          </svg>
+        </a>
+        <a href="https://instagram.com/kenvano19" target="_blank" rel="noopener noreferrer"
+          class="p-2 text-gray-400 hover:text-white transition-colors duration-200" aria-label="Instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+          </svg>
+        </a>
+        <a href="#contact"
+          class="px-5 py-2.5 rounded-xl bg-linear-to-r from-brand-purple to-accent-blue text-sm font-semibold text-white shadow-md shadow-brand-purple/20 hover:shadow-lg hover:shadow-accent-blue/30 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300">
+          Get In Touch
+        </a>
+      </div>
+
+      <!-- Mobile Menu Toggle -->
+      <button class="md:hidden p-2 text-gray-300 hover:text-white transition-colors focus:outline-none" id="menu-btn"
+        aria-label="Toggle Menu">
+        <i data-lucide="menu" class="w-6 h-6" id="menu-icon"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div
+      class="hidden md:hidden absolute top-20 left-0 w-full glass shadow-xl border-b border-white/5 transition-all duration-300"
+      id="mobile-menu">
+      <div class="px-6 py-6 flex flex-col gap-4">
+        <a href="#home"
+          class="mobile-link text-lg font-medium text-gray-300 hover:text-white transition-colors">Home</a>
+        <a href="#about"
+          class="mobile-link text-lg font-medium text-gray-300 hover:text-white transition-colors">About</a>
+        <a href="#services"
+          class="mobile-link text-lg font-medium text-gray-300 hover:text-white transition-colors">Services</a>
+        <a href="#portfolio"
+          class="mobile-link text-lg font-medium text-gray-300 hover:text-white transition-colors">Portfolio</a>
+        <a href="#contact"
+          class="mobile-link text-lg hover:text-white transition-colors font-semibold bg-linear-to-r from-brand-purple to-accent-blue bg-clip-text text-transparent">Contact</a>
+        <hr class="border-white/5 my-2" />
+        <div class="flex items-center gap-6 justify-center">
+          <a href="https://github.com/candrasp" target="_blank" rel="noopener noreferrer"
+            class="text-gray-400 hover:text-white transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+              <path
+                d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+              <path d="M9 18c-4.51 2-5-2-7-2" />
+            </svg>
+          </a>
+          <a href="https://instagram.com/kenvano19" target="_blank" rel="noopener noreferrer"
+            class="text-gray-400 hover:text-white transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center pt-28 pb-16 px-6 overflow-hidden">
+      <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+
+        <!-- Text Info -->
+        <div class="lg:col-span-7 flex flex-col items-start text-left">
+          <div
+            class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-purple/10 border border-brand-purple/20 mb-6 animate-pulse-slow">
+            <span class="w-2 h-2 rounded-full bg-accent-blue"></span>
+            <span class="text-xs font-semibold uppercase tracking-wider text-light-sky">Available for Projects</span>
+          </div>
+
+          <h2 class="font-display font-medium text-gray-400 text-lg md:text-xl mb-3">
+            Hi, I am <span class="text-white font-bold">CandraSP</span>
+          </h2>
+
+          <h1
+            class="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-tight mb-6 bg-linear-to-r from-white via-light-sky to-accent-blue bg-clip-text text-transparent">
+            Building fast, scalable, and secure applications.
+          </h1>
+
+          <p class="text-gray-300 text-base md:text-lg max-w-xl mb-8 leading-relaxed">
+            With over <span class="text-accent-blue font-semibold">9 years of professional experience</span>, I design
+            and build highly performant web architectures and native desktop solutions under the brand <span
+              class="text-white font-semibold">KenVano</span>.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-4">
+            <a href="#portfolio"
+              class="px-8 py-3.5 rounded-xl bg-linear-to-r from-brand-purple to-accent-blue font-semibold text-white shadow-lg shadow-brand-purple/20 hover:shadow-xl hover:shadow-accent-blue/30 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300">
+              Explore My Work
+            </a>
+            <a href="#contact"
+              class="px-8 py-3.5 rounded-xl bg-white/5 border border-white/10 font-semibold text-gray-200 hover:bg-white/10 hover:text-white active:scale-[0.98] transition-all duration-300">
+              Let's Connect
+            </a>
+          </div>
+        </div>
+
+        <!-- Interactive Graphic/Brand Space -->
+        <div class="lg:col-span-5 flex justify-center relative">
+          <div class="relative w-72 h-72 sm:w-96 sm:h-96 flex items-center justify-center">
+            <!-- Animated outer glow ring -->
+            <div
+              class="absolute inset-0 rounded-full border border-dashed border-accent-blue/30 animate-[spin_40s_linear_infinite] pointer-events-none">
+            </div>
+            <div
+              class="absolute -inset-4 rounded-full border border-white/5 animate-[spin_60s_linear_infinite] pointer-events-none">
+            </div>
+
+            <!-- Main Floating Brand Card -->
+            <div
+              class="w-64 h-64 sm:w-80 sm:h-80 rounded-3xl glass-card flex flex-col justify-between p-8 shadow-2xl relative z-10 animate-float">
+              <div class="flex justify-between items-start">
+                <!-- SVG Logo in Hero Card -->
+                <div class="w-12 h-12">
+                  <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full drop-shadow-lg">
+                    <defs>
+                      <linearGradient id="heroLogoGrad" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                        <stop offset="0%" stop-color="#4647ae"/>
+                        <stop offset="100%" stop-color="#4382df"/>
+                      </linearGradient>
+                    </defs>
+                    <rect width="40" height="40" rx="10" fill="url(#heroLogoGrad)"/>
+                    <path d="M10 20 L16 14 L16 16.5 L13 20 L16 23.5 L16 26 Z" fill="white" opacity="0.9"/>
+                    <path d="M30 20 L24 14 L24 16.5 L27 20 L24 23.5 L24 26 Z" fill="white" opacity="0.9"/>
+                    <line x1="22" y1="13" x2="18" y2="27" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.75"/>
+                  </svg>
+                </div>
+                <div
+                  class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[10px] uppercase font-bold tracking-widest text-light-sky">
+                  EST. 2017
+                </div>
+              </div>
+
+              <div class="my-6">
+                <h3 class="font-display font-extrabold text-2xl tracking-wide text-white">KenVano</h3>
+                <p class="text-xs text-gray-400 mt-1">Web & Desktop Development Studio</p>
+              </div>
+
+              <div class="border-t border-white/5 pt-4 flex justify-between items-center text-xs text-gray-400">
+                <div>
+                  <p class="font-semibold text-gray-300">CandraSP</p>
+                  <p class="text-[10px]">Lead Developer</p>
+                </div>
+                <div class="flex items-center gap-1.5 text-accent-blue font-semibold">
+                  <span class="w-1.5 h-1.5 rounded-full bg-green-500 animate-ping"></span>
+                  9+ Yrs Exp
+                </div>
+              </div>
+            </div>
+
+            <!-- Extra small floating elements -->
+            <div class="absolute top-10 left-6 glass p-3 rounded-2xl shadow-xl animate-float"
+              style="animation-delay: -2s;">
+              <i data-lucide="code" class="w-6 h-6 text-accent-blue"></i>
+            </div>
+            <div class="absolute bottom-12 right-6 glass p-3 rounded-2xl shadow-xl animate-float"
+              style="animation-delay: -4s;">
+              <i data-lucide="shield-check" class="w-6 h-6 text-emerald-400"></i>
+            </div>
+            <div class="absolute top-1/2 -right-8 glass p-3 rounded-2xl shadow-xl animate-float"
+              style="animation-delay: -1s;">
+              <i data-lucide="zap" class="w-6 h-6 text-amber-400"></i>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Stats Banner -->
+    <section class="py-12 bg-primary-dark/10 border-y border-white/5">
+      <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+        <div>
+          <h3 class="font-display font-extrabold text-3xl sm:text-4xl text-accent-blue">9+</h3>
+          <p class="text-xs sm:text-sm text-gray-400 uppercase tracking-widest mt-1">Years of Experience</p>
+        </div>
+        <div>
+          <h3 class="font-display font-extrabold text-3xl sm:text-4xl text-white">500+</h3>
+          <p class="text-xs sm:text-sm text-gray-400 uppercase tracking-widest mt-1">Projects Delivered</p>
+        </div>
+        <div>
+          <h3 class="font-display font-extrabold text-3xl sm:text-4xl text-brand-purple">100%</h3>
+          <p class="text-xs sm:text-sm text-gray-400 uppercase tracking-widest mt-1">Client Satisfaction</p>
+        </div>
+        <div>
+          <h3 class="font-display font-extrabold text-3xl sm:text-4xl text-light-sky">24/7</h3>
+          <p class="text-xs sm:text-sm text-gray-400 uppercase tracking-widest mt-1">Continuous Support</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 px-6 relative">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+
+          <!-- Side Image Placeholder / Custom Brand Graphic -->
+          <div class="lg:col-span-5 flex justify-center">
+            <div class="relative group">
+              <div
+                class="absolute -inset-1.5 rounded-2xl bg-linear-to-r from-brand-purple to-accent-blue opacity-30 blur-lg group-hover:opacity-50 transition duration-500">
+              </div>
+              <div
+                class="relative w-80 h-[420px] rounded-2xl bg-linear-to-br from-[#12162e] to-[#1e2348] border border-white/10 overflow-hidden p-8 flex flex-col justify-between">
+                <div class="space-y-4">
+                  <div class="flex items-center gap-2">
+                    <span class="w-3 h-3 rounded-full bg-red-500"></span>
+                    <span class="w-3 h-3 rounded-full bg-yellow-500"></span>
+                    <span class="w-3 h-3 rounded-full bg-green-500"></span>
+                  </div>
+                  <div class="font-mono text-[10px] text-gray-400 leading-relaxed space-y-1 mt-4">
+                    <p class="text-accent-blue"><span class="text-pink-400">const</span> developer = {</p>
+                    <p class="pl-4">name: <span class="text-amber-300 font-semibold">"CandraSP"</span>,</p>
+                    <p class="pl-4">brand: <span class="text-amber-300">"KenVano"</span>,</p>
+                    <p class="pl-4">languages: [<span class="text-emerald-400">"PHP", "JS/TS", "Go", "Rust"</span>],</p>
+                    <p class="pl-4">frameworks: [<span class="text-emerald-400">"Laravel", "Nuxt", "Tauri"</span>],</p>
+                    <p class="pl-4">databases: [<span class="text-emerald-400">"Postgres", "Redis", "SQLite"</span>]</p>
+                    <p class="text-accent-blue">};</p>
+                  </div>
+                </div>
+
+                <div class="text-xs text-gray-500 flex justify-between items-center mt-6">
+                  <span>// Ready to compile</span>
+                  <i data-lucide="terminal" class="w-5 h-5 text-gray-400"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Content Detail -->
+          <div class="lg:col-span-7">
+            <h4 class="text-sm font-bold text-accent-blue uppercase tracking-widest mb-3">About Me</h4>
+            <h2 class="font-display font-extrabold text-3xl sm:text-4xl mb-6 text-white">
+              Designing Code That Runs Fast & Stays Secure
+            </h2>
+            <p class="text-gray-300 mb-6 leading-relaxed">
+              I am CandraSP, a developer dedicated to crafting exceptional digital experiences. Through KenVano, I
+              partner with companies and individuals to engineer modern, highly optimize systems. My background spans
+              nearly a decade, allowing me to bridge the gap between high-level web architecture and low-level system
+              performance.
+            </p>
+
+            <!-- Tabs / Skill Pill containers -->
+            <div class="mb-8">
+              <h3 class="text-sm font-semibold uppercase tracking-wider text-gray-400 mb-4">Core Competencies</h3>
+              <div class="flex flex-wrap gap-2.5">
+                <span
+                  class="px-4 py-1.5 rounded-lg bg-white/5 border border-white/10 text-xs font-semibold text-gray-300">PHP
+                  / Laravel</span>
+                <span
+                  class="px-4 py-1.5 rounded-lg bg-white/5 border border-white/10 text-xs font-semibold text-gray-300">JS
+                  / TS (NuxtJS, Express)</span>
+                <span
+                  class="px-4 py-1.5 rounded-lg bg-white/5 border border-white/10 text-xs font-semibold text-gray-300">Go
+                  / Rust</span>
+                <span
+                  class="px-4 py-1.5 rounded-lg bg-white/5 border border-white/10 text-xs font-semibold text-gray-300">Tauri
+                  Desktop Apps</span>
+                <span
+                  class="px-4 py-1.5 rounded-lg bg-white/5 border border-white/10 text-xs font-semibold text-gray-300">Backend
+                  & API Architectures</span>
+                <span
+                  class="px-4 py-1.5 rounded-lg bg-white/5 border border-white/10 text-xs font-semibold text-gray-300">SQL
+                  (MySQL, Postgres, SQLite)</span>
+                <span
+                  class="px-4 py-1.5 rounded-lg bg-white/5 border border-white/10 text-xs font-semibold text-gray-300">NoSQL
+                  & Cache (MongoDB, Redis)</span>
+                <span
+                  class="px-4 py-1.5 rounded-lg bg-white/5 border border-white/10 text-xs font-semibold text-gray-300">Tailwind
+                  CSS v4</span>
+              </div>
+            </div>
+
+            <a href="#contact"
+              class="inline-flex items-center gap-2 text-sm font-bold text-accent-blue hover:text-white transition-colors group">
+              Download Resume <i data-lucide="arrow-right"
+                class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 px-6 bg-[#0e1122]">
+      <div class="max-w-7xl mx-auto">
+        <!-- Section Title -->
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <h4 class="text-sm font-bold text-accent-blue uppercase tracking-widest mb-3">Our Services</h4>
+          <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white mb-4">What I Can Do For You</h2>
+          <p class="text-gray-400 text-sm sm:text-base">Custom, professional software design and development built to
+            scale and secure your operations.</p>
+        </div>
+
+        <!-- Services Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          <!-- Service 1 -->
+          <div class="p-8 rounded-3xl glass-card flex flex-col justify-between h-80">
+            <div>
+              <div class="w-12 h-12 rounded-2xl bg-primary-dark/40 flex items-center justify-center mb-6">
+                <i data-lucide="globe" class="w-6 h-6 text-accent-blue"></i>
+              </div>
+              <h3 class="font-display font-bold text-xl text-white mb-3">Web Development</h3>
+              <p class="text-gray-400 text-sm leading-relaxed">
+                Building bespoke, responsive, and blazing fast web apps using Laravel, Nuxtjs, Vite, and Tailwind CSS
+                v4.
+              </p>
+            </div>
+            <a href="#contact"
+              class="inline-flex items-center gap-1.5 text-xs font-bold text-light-sky hover:text-white transition-colors group mt-4">
+              Learn more <i data-lucide="chevron-right"
+                class="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform"></i>
+            </a>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="p-8 rounded-3xl glass-card flex flex-col justify-between h-80">
+            <div>
+              <div class="w-12 h-12 rounded-2xl bg-brand-purple/20 flex items-center justify-center mb-6">
+                <i data-lucide="monitor" class="w-6 h-6 text-brand-purple"></i>
+              </div>
+              <h3 class="font-display font-bold text-xl text-white mb-3">Desktop App Development</h3>
+              <p class="text-gray-400 text-sm leading-relaxed">
+                Cross-platform desktop tools built on Tauri, Rust, Go, or .NET. High-speed native performance, security,
+                and offline support.
+              </p>
+            </div>
+            <a href="#contact"
+              class="inline-flex items-center gap-1.5 text-xs font-bold text-light-sky hover:text-white transition-colors group mt-4">
+              Learn more <i data-lucide="chevron-right"
+                class="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform"></i>
+            </a>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="p-8 rounded-3xl glass-card flex flex-col justify-between h-80">
+            <div>
+              <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 flex items-center justify-center mb-6">
+                <i data-lucide="database" class="w-6 h-6 text-emerald-400"></i>
+              </div>
+              <h3 class="font-display font-bold text-xl text-white mb-3">Backend & API Architectures</h3>
+              <p class="text-gray-400 text-sm leading-relaxed">
+                Designing secure RESTful APIs and optimizing databases utilizing MySQL, PostgreSQL, MongoDB, Redis, and
+                SQLite.
+              </p>
+            </div>
+            <a href="#contact"
+              class="inline-flex items-center gap-1.5 text-xs font-bold text-light-sky hover:text-white transition-colors group mt-4">
+              Learn more <i data-lucide="chevron-right"
+                class="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform"></i>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-24 px-6 relative">
+      <div class="max-w-7xl mx-auto">
+        <!-- Title & Filter Menu -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+          <div>
+            <h4 class="text-sm font-bold text-accent-blue uppercase tracking-widest mb-3">Portfolio</h4>
+            <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white">Latest Creative Work</h2>
+          </div>
+
+          <!-- Filter Bar -->
+          <div
+            class="flex items-center gap-2 p-1.5 rounded-2xl bg-white/5 border border-white/5 self-start md:self-auto">
+            <button class="filter-btn active px-4 py-2 rounded-xl text-xs font-semibold transition-all duration-200"
+              data-filter="all">All</button>
+            <button
+              class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold text-gray-400 hover:text-white transition-all duration-200"
+              data-filter="web">Web</button>
+            <button
+              class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold text-gray-400 hover:text-white transition-all duration-200"
+              data-filter="desktop">Desktop</button>
+          </div>
+        </div>
+
+        <!-- Project Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="projects-grid">
+
+          <!-- Project 1 (Web - dccwifi) -->
+          <a href="https://github.com/candrasp/dccwifi" target="_blank" rel="noopener noreferrer"
+            class="project-card group rounded-3xl glass-card overflow-hidden block" data-category="web">
+            <!-- Visual Mock -->
+            <div
+              class="aspect-video w-full bg-linear-to-tr from-primary-dark/80 to-[#1e2348] relative overflow-hidden flex items-center justify-center p-8">
+              <div class="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition duration-300"></div>
+              <!-- Mini app preview inside card -->
+              <div
+                class="w-full h-full rounded-xl bg-[#0b0d19]/90 border border-white/10 shadow-2xl p-4 flex flex-col justify-between transform group-hover:scale-[1.02] transition duration-500">
+                <div class="flex items-center justify-between border-b border-white/5 pb-2.5">
+                  <span class="text-[10px] font-bold text-accent-blue">DCCWIFI.NET</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="w-3.5 h-3.5 text-accent-blue animate-pulse-slow">
+                    <path d="M5 12.55a11 11 0 0 1 14.08 0" />
+                    <path d="M1.42 9a16 16 0 0 1 21.16 0" />
+                    <path d="M8.53 16.11a6 6 0 0 1 6.95 0" />
+                    <line x1="12" x2="12" y1="20" y2="20" />
+                  </svg>
+                </div>
+                <div class="my-2 space-y-1 text-left">
+                  <p class="text-[11px] font-bold text-white leading-tight">Koneksi Stabil, Harga Pas, Tanpa Batas.</p>
+                  <p class="text-[8px] text-gray-400">Internet Murah Ponorogo • Mulai Rp125rb/bln</p>
+                </div>
+                <div class="flex justify-between items-center text-[9px] text-gray-400 border-t border-white/5 pt-2">
+                  <span>FIBER & WIRELESS</span>
+                  <span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 font-bold">UNLIMITED</span>
+                </div>
+              </div>
+            </div>
+            <!-- Content -->
+            <div class="p-6">
+              <div class="flex justify-between items-start">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-accent-blue">Landing Page</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="w-4 h-4 text-gray-400 group-hover:text-white transition-colors">
+                  <path
+                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                  <path d="M9 18c-4.51 2-5-2-7-2" />
+                </svg>
+              </div>
+              <h3
+                class="font-display font-bold text-xl text-white mt-1.5 mb-2 group-hover:text-accent-blue transition-colors">
+                DCCWIFI — Internet Murah Ponorogo</h3>
+              <p class="text-gray-400 text-xs sm:text-sm leading-relaxed mb-4">
+                A high-performance promotional landing page and client catalog for a local ISP in Ponorogo. Packages
+                start from Rp125rb/month with fiber optic technology.
+              </p>
+              <div class="flex items-center gap-4">
+                <span class="text-xs font-medium text-light-sky">Vanilla JS</span>
+                <span class="text-xs font-medium text-light-sky">Tailwind CSS</span>
+                <span class="text-xs font-medium text-light-sky">Responsive UX</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Project 2 (Desktop - KenWa) -->
+          <a href="https://github.com/candrasp/KenWa" target="_blank" rel="noopener noreferrer"
+            class="project-card group rounded-3xl glass-card overflow-hidden block" data-category="desktop">
+            <!-- Visual Mock -->
+            <div
+              class="aspect-video w-full bg-linear-to-tr from-[#161a33] to-[#252a55] relative overflow-hidden flex items-center justify-center p-8">
+              <div class="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition duration-300"></div>
+              <!-- Mini app preview inside card -->
+              <div
+                class="w-full h-full rounded-xl bg-[#0b0d19]/90 border border-white/10 shadow-2xl p-4 flex flex-col justify-between transform group-hover:scale-[1.02] transition duration-500 font-sans">
+                <div class="flex items-center justify-between border-b border-white/5 pb-2.5">
+                  <div class="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="w-4 h-4 text-emerald-400">
+                      <path
+                        d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                    </svg>
+                    <span class="text-[10px] font-bold text-gray-300 font-mono">KenWA.exe</span>
+                  </div>
+                  <span
+                    class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 text-[8px] font-semibold font-mono">ACTIVE</span>
+                </div>
+                <div class="flex flex-col gap-1 my-3 text-left">
+                  <div class="h-2 w-2/3 bg-white/10 rounded"></div>
+                  <div class="h-2 w-1/2 bg-white/5 rounded"></div>
+                  <div class="h-2 w-5/6 bg-white/10 rounded"></div>
+                </div>
+                <div class="flex justify-between items-center text-[9px] text-gray-400">
+                  <span>BROADCAST SENT</span>
+                  <span class="text-emerald-400 font-bold">1,842 / 1,850</span>
+                </div>
+              </div>
+            </div>
+            <!-- Content -->
+            <div class="p-6">
+              <div class="flex justify-between items-start">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-brand-purple">Desktop Launcher</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="w-4 h-4 text-gray-400 group-hover:text-white transition-colors">
+                  <path
+                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                  <path d="M9 18c-4.51 2-5-2-7-2" />
+                </svg>
+              </div>
+              <h3
+                class="font-display font-bold text-xl text-white mt-1.5 mb-2 group-hover:text-accent-blue transition-colors">
+                KenWA — WhatsApp Blaster</h3>
+              <p class="text-gray-400 text-xs sm:text-sm leading-relaxed mb-4">
+                A modern desktop launcher application designed to easily, quickly, and securely broadcast WhatsApp bulk
+                messages. Powered by Tauri v2, Express.js, and Baileys.
+              </p>
+              <div class="flex items-center gap-3.5">
+                <span class="text-xs font-medium text-light-sky">Tauri v2</span>
+                <span class="text-xs font-medium text-light-sky">Express.js</span>
+                <span class="text-xs font-medium text-light-sky">Baileys</span>
+                <span class="text-xs font-medium text-light-sky">SQLite</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Project 3 (Desktop - KenVano) -->
+          <a href="https://github.com/candrasp/KenVano" target="_blank" rel="noopener noreferrer"
+            class="project-card group rounded-3xl glass-card overflow-hidden block col-span-1 md:col-span-2"
+            data-category="desktop">
+            <!-- Visual Mock -->
+            <div
+              class="aspect-video w-full md:h-80 bg-linear-to-tr from-[#0e214c] to-[#122e81]/60 relative overflow-hidden flex items-center justify-center p-8">
+              <div class="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition duration-300"></div>
+              <!-- Mini app preview inside card -->
+              <div
+                class="w-full h-full max-w-xl rounded-xl bg-[#0b0d19]/90 border border-white/10 shadow-2xl p-6 flex flex-col justify-between transform group-hover:scale-[1.01] transition duration-500">
+                <div class="flex items-center justify-between border-b border-white/5 pb-3">
+                  <div class="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="w-4 h-4 text-accent-blue">
+                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                      <polyline points="7 10 12 15 17 10" />
+                      <line x1="12" x2="12" y1="15" y2="3" />
+                    </svg>
+                    <span class="text-xs font-bold text-white font-mono">KenVano.Downloader</span>
+                  </div>
+                  <div class="flex gap-1.5">
+                    <span class="w-2.5 h-2.5 rounded-full bg-red-500"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-yellow-500"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-green-500"></span>
+                  </div>
+                </div>
+                <div class="my-4 space-y-2">
+                  <div
+                    class="w-full h-9 rounded bg-white/5 border border-white/10 px-3 flex items-center text-[10px] text-gray-500 font-mono">
+                    https://socialmedia.com/watch?v=favorite-video
+                  </div>
+                  <div class="h-2 rounded-full bg-white/5 overflow-hidden">
+                    <div class="h-full bg-linear-to-r from-brand-purple to-accent-blue w-[85%]"></div>
+                  </div>
+                </div>
+                <div class="flex justify-between items-center text-[10px] text-gray-400">
+                  <span>Downloading: 85% | 12.4 MB/s</span>
+                  <span
+                    class="px-2.5 py-0.5 rounded bg-accent-blue/10 text-accent-blue font-bold uppercase tracking-wider text-[8px]">Audio
+                    + Video</span>
+                </div>
+              </div>
+            </div>
+            <!-- Content -->
+            <div class="p-6">
+              <div class="flex justify-between items-start">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-brand-purple">Desktop App</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="w-4 h-4 text-gray-400 group-hover:text-white transition-colors">
+                  <path
+                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                  <path d="M9 18c-4.51 2-5-2-7-2" />
+                </svg>
+              </div>
+              <h3
+                class="font-display font-bold text-xl text-white mt-1.5 mb-2 group-hover:text-accent-blue transition-colors">
+                KenVano Media Downloader</h3>
+              <p class="text-gray-400 text-xs sm:text-sm leading-relaxed mb-4">
+                A desktop application designed specifically to download videos and music from social media in the
+                easiest, fastest, and most elegant way. Built with Tauri for maximum performance and minimal footprint.
+              </p>
+              <div class="flex items-center gap-4">
+                <span class="text-xs font-medium text-light-sky">Tauri v2</span>
+                <span class="text-xs font-medium text-light-sky">TypeScript</span>
+                <span class="text-xs font-medium text-light-sky">yt-dlp</span>
+              </div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-6 bg-[#0e1122]/60 border-t border-white/5">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+
+          <!-- Contact Info -->
+          <div class="lg:col-span-5 flex flex-col justify-between">
+            <div>
+              <h4 class="text-sm font-bold text-accent-blue uppercase tracking-widest mb-3">Get in Touch</h4>
+              <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white mb-6">Let's Bring Your Vision to
+                Life</h2>
+              <p class="text-gray-400 text-sm sm:text-base mb-8 leading-relaxed">
+                Have an application idea or need developer resources? Send a message and let's construct something fast,
+                scalable, and secure.
+              </p>
+            </div>
+
+            <!-- Contact Cards -->
+            <div class="space-y-4">
+              <a href="https://github.com/candrasp" target="_blank" rel="noopener noreferrer"
+                class="flex items-center gap-4 p-4 rounded-2xl bg-white/5 border border-white/5 hover:border-accent-blue/30 hover:bg-white/10 transition-all duration-300">
+                <div class="w-12 h-12 rounded-xl bg-primary-dark/30 flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="w-6 h-6 text-accent-blue">
+                    <path
+                      d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                    <path d="M9 18c-4.51 2-5-2-7-2" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="text-sm font-bold text-white">GitHub</h4>
+                  <p class="text-xs text-gray-400 mt-0.5">github.com/candrasp</p>
+                </div>
+              </a>
+
+              <a href="https://instagram.com/kenvano19" target="_blank" rel="noopener noreferrer"
+                class="flex items-center gap-4 p-4 rounded-2xl bg-white/5 border border-white/5 hover:border-brand-purple/30 hover:bg-white/10 transition-all duration-300">
+                <div class="w-12 h-12 rounded-xl bg-brand-purple/10 flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="w-6 h-6 text-brand-purple">
+                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="text-sm font-bold text-white">Instagram</h4>
+                  <p class="text-xs text-gray-400 mt-0.5">@kenvano19</p>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Contact Form Card -->
+          <div class="lg:col-span-7">
+            <div class="p-8 rounded-3xl glass-card">
+              <form id="contact-form" class="space-y-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div>
+                    <label for="name" class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Your
+                      Name</label>
+                    <input type="text" id="name" required
+                      class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-accent-blue transition-colors duration-200"
+                      placeholder="John Doe" />
+                  </div>
+                  <div>
+                    <label for="email" class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Email
+                      Address</label>
+                    <input type="email" id="email" required
+                      class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-accent-blue transition-colors duration-200"
+                      placeholder="john@example.com" />
+                  </div>
+                </div>
+
+                <div>
+                  <label for="subject"
+                    class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Subject</label>
+                  <input type="text" id="subject" required
+                    class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-accent-blue transition-colors duration-200"
+                    placeholder="Project details" />
+                </div>
+
+                <div>
+                  <label for="message"
+                    class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Message</label>
+                  <textarea id="message" rows="5" required
+                    class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-accent-blue transition-colors duration-200 resize-none"
+                    placeholder="Let's build something..."></textarea>
+                </div>
+
+                <button type="submit" id="submit-btn"
+                  class="w-full py-4 rounded-xl bg-linear-to-r from-brand-purple to-accent-blue font-bold text-white shadow-lg shadow-brand-purple/20 hover:shadow-xl hover:shadow-accent-blue/30 hover:scale-[1.01] active:scale-[0.99] transition-all duration-300 flex items-center justify-center gap-2">
+                  <span id="btn-text">Send Message</span>
+                  <svg id="btn-spinner" class="hidden w-5 h-5 animate-spin" xmlns="http://www.w3.org/2000/svg"
+                    fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor"
+                      d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+                    </path>
+                  </svg>
+                </button>
+              </form>
+              <div id="form-feedback"
+                class="hidden mt-4 p-4 rounded-xl text-center text-sm font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                ✅ Thank you! Your message has been sent successfully.
+              </div>
+              <div id="form-error"
+                class="hidden mt-4 p-4 rounded-xl text-center text-sm font-semibold bg-red-500/10 text-red-400 border border-red-500/20">
+                ❌ Oops! Something went wrong. Please try again or contact via GitHub.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-12 px-6 border-t border-white/5 bg-[#0b0d19]">
+    <div
+      class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+      <div>
+        <a href="#home" class="flex items-center justify-center md:justify-start gap-2.5 group mb-2">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 opacity-80 group-hover:opacity-100 transition-opacity duration-300">
+            <defs>
+              <linearGradient id="footerLogoGrad" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#4647ae"/>
+                <stop offset="100%" stop-color="#4382df"/>
+              </linearGradient>
+            </defs>
+            <rect width="40" height="40" rx="10" fill="url(#footerLogoGrad)"/>
+            <path d="M10 20 L16 14 L16 16.5 L13 20 L16 23.5 L16 26 Z" fill="white" opacity="0.9"/>
+            <path d="M30 20 L24 14 L24 16.5 L27 20 L24 23.5 L24 26 Z" fill="white" opacity="0.9"/>
+            <line x1="22" y1="13" x2="18" y2="27" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.75"/>
+          </svg>
+          <span class="font-display font-extrabold text-lg bg-linear-to-r from-white via-light-sky to-accent-blue bg-clip-text text-transparent">KenVano</span>
+        </a>
+        <p class="text-xs text-gray-500">© 2026 KenVano. Developed by CandraSP. All rights reserved.</p>
+      </div>
+
+      <div class="flex gap-6 text-xs text-gray-400">
+        <a href="#home" class="hover:text-white transition-colors">Home</a>
+        <a href="#about" class="hover:text-white transition-colors">About</a>
+        <a href="#services" class="hover:text-white transition-colors">Services</a>
+        <a href="#portfolio" class="hover:text-white transition-colors">Portfolio</a>
+        <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Custom JS -->
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#4647ae"/>
+      <stop offset="100%" stop-color="#4382df"/>
+    </linearGradient>
+  </defs>
+  <!-- Background rounded square -->
+  <rect width="64" height="64" rx="16" fill="url(#grad)"/>
+  <!-- Left bracket < -->
+  <path d="M16 32 L25.6 22.4 L25.6 26.4 L20.8 32 L25.6 37.6 L25.6 41.6 Z" fill="white" opacity="0.92"/>
+  <!-- Right bracket > -->
+  <path d="M48 32 L38.4 22.4 L38.4 26.4 L43.2 32 L38.4 37.6 L38.4 41.6 Z" fill="white" opacity="0.92"/>
+  <!-- Forward slash / -->
+  <line x1="35.2" y1="20.8" x2="28.8" y2="43.2" stroke="white" stroke-width="3.2" stroke-linecap="round" opacity="0.78"/>
+</svg>
