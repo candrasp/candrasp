@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="id" class="scroll-smooth">
 
 <head>
   <meta charset="UTF-8" />
@@ -16,19 +16,75 @@
   <title>KenVano | CandraSP - Web & Desktop App Developer Portfolio</title>
   <meta name="description"
     content="Portfolio of CandraSP (KenVano), an expert web and desktop application developer with over 9 years of experience. Building fast, scalable, and secure applications." />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta name="keywords"
     content="CandraSP, KenVano, Web Development, Desktop App Development, Tailwind CSS v4, Portfolio, Developer, Indonesia" />
   <meta name="author" content="CandraSP" />
+  <link rel="canonical" href="https://kenvano.my.id/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="id_ID" />
+  <meta property="og:site_name" content="KenVano" />
+  <meta property="og:title" content="KenVano | CandraSP - Web & Desktop App Developer Portfolio" />
+  <meta property="og:description"
+    content="Portfolio of CandraSP (KenVano), an expert web and desktop application developer with over 9 years of experience. Building fast, scalable, and secure applications." />
+  <meta property="og:url" content="https://kenvano.my.id/" />
+  <meta property="og:image" content="https://kenvano.my.id/favicon.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="KenVano | CandraSP - Web & Desktop App Developer Portfolio" />
+  <meta name="twitter:description"
+    content="Portfolio of CandraSP (KenVano), an expert web and desktop application developer with over 9 years of experience. Building fast, scalable, and secure applications." />
+  <meta name="twitter:image" content="https://kenvano.my.id/favicon.svg" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://kenvano.my.id/#website",
+          "url": "https://kenvano.my.id/",
+          "name": "KenVano",
+          "inLanguage": "id-ID",
+          "publisher": {
+            "@id": "https://kenvano.my.id/#person"
+          }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://kenvano.my.id/#person",
+          "name": "CandraSP",
+          "alternateName": "KenVano",
+          "url": "https://kenvano.my.id/",
+          "image": "https://kenvano.my.id/favicon.svg",
+          "jobTitle": "Web and Desktop Application Developer",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "KenVano"
+          },
+          "sameAs": [
+            "https://github.com/candrasp",
+            "https://instagram.com/kenvano19"
+          ]
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://kenvano.my.id/#organization",
+          "name": "KenVano",
+          "url": "https://kenvano.my.id/",
+          "logo": "https://kenvano.my.id/favicon.svg"
+        }
+      ]
+    }
+  </script>
 
   <!-- Google Fonts -->
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <!-- Lucide Icons CDN -->
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://unpkg.com/lucide@0.540.0"></script>
 
   <!-- EmailJS CDN -->
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
@@ -66,25 +122,27 @@
           <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full drop-shadow-lg">
             <defs>
               <linearGradient id="logoGrad" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stop-color="#4647ae"/>
-                <stop offset="100%" stop-color="#4382df"/>
+                <stop offset="0%" stop-color="#4647ae" />
+                <stop offset="100%" stop-color="#4382df" />
               </linearGradient>
               <linearGradient id="logoGradLight" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stop-color="#6468cc"/>
-                <stop offset="100%" stop-color="#6ba3f5"/>
+                <stop offset="0%" stop-color="#6468cc" />
+                <stop offset="100%" stop-color="#6ba3f5" />
               </linearGradient>
             </defs>
             <!-- Background rounded square -->
-            <rect width="40" height="40" rx="10" fill="url(#logoGrad)"/>
+            <rect width="40" height="40" rx="10" fill="url(#logoGrad)" />
             <!-- Left bracket < -->
-            <path d="M10 20 L16 14 L16 16.5 L13 20 L16 23.5 L16 26 Z" fill="white" opacity="0.9"/>
+            <path d="M10 20 L16 14 L16 16.5 L13 20 L16 23.5 L16 26 Z" fill="white" opacity="0.9" />
             <!-- Right bracket > -->
-            <path d="M30 20 L24 14 L24 16.5 L27 20 L24 23.5 L24 26 Z" fill="white" opacity="0.9"/>
+            <path d="M30 20 L24 14 L24 16.5 L27 20 L24 23.5 L24 26 Z" fill="white" opacity="0.9" />
             <!-- Forward slash / in center -->
-            <line x1="22" y1="13" x2="18" y2="27" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.75"/>
+            <line x1="22" y1="13" x2="18" y2="27" stroke="white" stroke-width="2" stroke-linecap="round"
+              opacity="0.75" />
           </svg>
         </div>
-        <span class="font-display font-bold text-xl tracking-wide bg-linear-to-r from-white via-light-sky to-accent-blue bg-clip-text text-transparent">KenVano</span>
+        <span
+          class="font-display font-bold text-xl tracking-wide bg-linear-to-r from-white via-light-sky to-accent-blue bg-clip-text text-transparent">KenVano</span>
       </a>
 
       <!-- Desktop Navigation -->
@@ -232,17 +290,19 @@
               <div class="flex justify-between items-start">
                 <!-- SVG Logo in Hero Card -->
                 <div class="w-12 h-12">
-                  <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full drop-shadow-lg">
+                  <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="w-full h-full drop-shadow-lg">
                     <defs>
                       <linearGradient id="heroLogoGrad" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
-                        <stop offset="0%" stop-color="#4647ae"/>
-                        <stop offset="100%" stop-color="#4382df"/>
+                        <stop offset="0%" stop-color="#4647ae" />
+                        <stop offset="100%" stop-color="#4382df" />
                       </linearGradient>
                     </defs>
-                    <rect width="40" height="40" rx="10" fill="url(#heroLogoGrad)"/>
-                    <path d="M10 20 L16 14 L16 16.5 L13 20 L16 23.5 L16 26 Z" fill="white" opacity="0.9"/>
-                    <path d="M30 20 L24 14 L24 16.5 L27 20 L24 23.5 L24 26 Z" fill="white" opacity="0.9"/>
-                    <line x1="22" y1="13" x2="18" y2="27" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.75"/>
+                    <rect width="40" height="40" rx="10" fill="url(#heroLogoGrad)" />
+                    <path d="M10 20 L16 14 L16 16.5 L13 20 L16 23.5 L16 26 Z" fill="white" opacity="0.9" />
+                    <path d="M30 20 L24 14 L24 16.5 L27 20 L24 23.5 L24 26 Z" fill="white" opacity="0.9" />
+                    <line x1="22" y1="13" x2="18" y2="27" stroke="white" stroke-width="2" stroke-linecap="round"
+                      opacity="0.75" />
                   </svg>
                 </div>
                 <div
@@ -351,13 +411,13 @@
           <div class="lg:col-span-7">
             <h4 class="text-sm font-bold text-accent-blue uppercase tracking-widest mb-3">About Me</h4>
             <h2 class="font-display font-extrabold text-3xl sm:text-4xl mb-6 text-white">
-              Designing Code That Runs Fast & Stays Secure
+              Designing Fast Web Apps and Secure Desktop Software
             </h2>
             <p class="text-gray-300 mb-6 leading-relaxed">
-              I am CandraSP, a developer dedicated to crafting exceptional digital experiences. Through KenVano, I
-              partner with companies and individuals to engineer modern, highly optimize systems. My background spans
-              nearly a decade, allowing me to bridge the gap between high-level web architecture and low-level system
-              performance.
+              I am CandraSP, a web and desktop app developer focused on fast, secure digital products. Through KenVano,
+              I help companies and individuals build modern systems with clean architecture, strong performance, and
+              reliable user experience. My background spans nearly a decade across web engineering and desktop
+              software.
             </p>
 
             <!-- Tabs / Skill Pill containers -->
@@ -408,7 +468,8 @@
         <!-- Section Title -->
         <div class="text-center max-w-2xl mx-auto mb-16">
           <h4 class="text-sm font-bold text-accent-blue uppercase tracking-widest mb-3">Our Services</h4>
-          <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white mb-4">What I Can Do For You</h2>
+          <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white mb-4">Web Developer and Desktop App
+            Services</h2>
           <p class="text-gray-400 text-sm sm:text-base">Custom, professional software design and development built to
             scale and secure your operations.</p>
         </div>
@@ -484,7 +545,8 @@
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div>
             <h4 class="text-sm font-bold text-accent-blue uppercase tracking-widest mb-3">Portfolio</h4>
-            <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white">Latest Creative Work</h2>
+            <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white">Selected Web and Desktop Projects
+            </h2>
           </div>
 
           <!-- Filter Bar -->
@@ -515,7 +577,7 @@
               <div
                 class="w-full h-full rounded-xl bg-[#0b0d19]/90 border border-white/10 shadow-2xl p-4 flex flex-col justify-between transform group-hover:scale-[1.02] transition duration-500">
                 <div class="flex items-center justify-between border-b border-white/5 pb-2.5">
-                  <span class="text-[10px] font-bold text-accent-blue">DCCWIFI.NET</span>
+                  <span class="text-[10px] font-bold text-accent-blue">DCCWIFI.COM</span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                     class="w-3.5 h-3.5 text-accent-blue animate-pulse-slow">
@@ -549,7 +611,7 @@
               </div>
               <h3
                 class="font-display font-bold text-xl text-white mt-1.5 mb-2 group-hover:text-accent-blue transition-colors">
-                DCCWIFI — Internet Murah Ponorogo</h3>
+                DCCWIFI - Internet Murah Ponorogo</h3>
               <p class="text-gray-400 text-xs sm:text-sm leading-relaxed mb-4">
                 A high-performance promotional landing page and client catalog for a local ISP in Ponorogo. Packages
                 start from Rp125rb/month with fiber optic technology.
@@ -610,7 +672,7 @@
               </div>
               <h3
                 class="font-display font-bold text-xl text-white mt-1.5 mb-2 group-hover:text-accent-blue transition-colors">
-                KenWA — WhatsApp Blaster</h3>
+                KenWA - WhatsApp Blaster</h3>
               <p class="text-gray-400 text-xs sm:text-sm leading-relaxed mb-4">
                 A modern desktop launcher application designed to easily, quickly, and securely broadcast WhatsApp bulk
                 messages. Powered by Tauri v2, Express.js, and Baileys.
@@ -626,16 +688,15 @@
 
           <!-- Project 3 (Desktop - KenVano) -->
           <a href="https://github.com/candrasp/KenVano" target="_blank" rel="noopener noreferrer"
-            class="project-card group rounded-3xl glass-card overflow-hidden block col-span-1 md:col-span-2"
-            data-category="desktop">
+            class="project-card group rounded-3xl glass-card overflow-hidden block" data-category="desktop">
             <!-- Visual Mock -->
             <div
-              class="aspect-video w-full md:h-80 bg-linear-to-tr from-[#0e214c] to-[#122e81]/60 relative overflow-hidden flex items-center justify-center p-8">
+              class="aspect-video w-full bg-linear-to-tr from-[#0e214c] to-[#122e81]/60 relative overflow-hidden flex items-center justify-center p-8">
               <div class="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition duration-300"></div>
               <!-- Mini app preview inside card -->
               <div
-                class="w-full h-full max-w-xl rounded-xl bg-[#0b0d19]/90 border border-white/10 shadow-2xl p-6 flex flex-col justify-between transform group-hover:scale-[1.01] transition duration-500">
-                <div class="flex items-center justify-between border-b border-white/5 pb-3">
+                class="w-full h-full rounded-xl bg-[#0b0d19]/90 border border-white/10 shadow-2xl p-4 flex flex-col justify-between transform group-hover:scale-[1.02] transition duration-500 font-sans">
+                <div class="flex items-center justify-between border-b border-white/5 pb-2.5">
                   <div class="flex items-center gap-2">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                       stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -644,27 +705,27 @@
                       <polyline points="7 10 12 15 17 10" />
                       <line x1="12" x2="12" y1="15" y2="3" />
                     </svg>
-                    <span class="text-xs font-bold text-white font-mono">KenVano.Downloader</span>
+                    <span class="text-[10px] font-bold text-white font-mono">KenVano.Downloader</span>
                   </div>
-                  <div class="flex gap-1.5">
-                    <span class="w-2.5 h-2.5 rounded-full bg-red-500"></span>
-                    <span class="w-2.5 h-2.5 rounded-full bg-yellow-500"></span>
-                    <span class="w-2.5 h-2.5 rounded-full bg-green-500"></span>
+                  <div class="flex gap-1">
+                    <span class="w-2 h-2 rounded-full bg-red-500"></span>
+                    <span class="w-2 h-2 rounded-full bg-yellow-500"></span>
+                    <span class="w-2 h-2 rounded-full bg-green-500"></span>
                   </div>
                 </div>
-                <div class="my-4 space-y-2">
+                <div class="my-2 space-y-1.5 text-left">
                   <div
-                    class="w-full h-9 rounded bg-white/5 border border-white/10 px-3 flex items-center text-[10px] text-gray-500 font-mono">
-                    https://socialmedia.com/watch?v=favorite-video
+                    class="w-full h-7 rounded bg-white/5 border border-white/10 px-2 flex items-center text-[8px] text-gray-500 font-mono">
+                    https://socialmedia.com/watch?v=...
                   </div>
-                  <div class="h-2 rounded-full bg-white/5 overflow-hidden">
+                  <div class="h-1.5 rounded-full bg-white/5 overflow-hidden">
                     <div class="h-full bg-linear-to-r from-brand-purple to-accent-blue w-[85%]"></div>
                   </div>
                 </div>
-                <div class="flex justify-between items-center text-[10px] text-gray-400">
+                <div class="flex justify-between items-center text-[8px] text-gray-400">
                   <span>Downloading: 85% | 12.4 MB/s</span>
                   <span
-                    class="px-2.5 py-0.5 rounded bg-accent-blue/10 text-accent-blue font-bold uppercase tracking-wider text-[8px]">Audio
+                    class="px-2 py-0.5 rounded bg-accent-blue/10 text-accent-blue font-bold uppercase tracking-wider text-[7px]">Audio
                     + Video</span>
                 </div>
               </div>
@@ -692,6 +753,75 @@
                 <span class="text-xs font-medium text-light-sky">Tauri v2</span>
                 <span class="text-xs font-medium text-light-sky">TypeScript</span>
                 <span class="text-xs font-medium text-light-sky">yt-dlp</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Project 4 (Desktop - KenPix) -->
+          <a href="https://github.com/candrasp/KenPix" target="_blank" rel="noopener noreferrer"
+            class="project-card group rounded-3xl glass-card overflow-hidden block" data-category="desktop">
+            <!-- Visual Mock -->
+            <div
+              class="aspect-video w-full bg-linear-to-tr from-[#1b153b] to-[#3a206a]/70 relative overflow-hidden flex items-center justify-center p-8">
+              <div class="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition duration-300"></div>
+              <!-- Mini app preview inside card -->
+              <div
+                class="w-full h-full rounded-xl bg-[#0b0d19]/90 border border-white/10 shadow-2xl p-4 flex flex-col justify-between transform group-hover:scale-[1.02] transition duration-500 font-sans">
+                <div class="flex items-center justify-between border-b border-white/5 pb-2.5">
+                  <div class="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="w-4 h-4 text-brand-purple">
+                      <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                      <circle cx="8.5" cy="8.5" r="1.5" />
+                      <polyline points="21 15 16 10 5 21" />
+                    </svg>
+                    <span class="text-[10px] font-bold text-white font-mono">KenPix.exe</span>
+                  </div>
+                  <span
+                    class="px-2 py-0.5 rounded bg-brand-purple/10 text-brand-purple text-[8px] font-semibold font-mono">v1.0.0</span>
+                </div>
+                <div class="flex flex-col gap-1.5 my-2 text-[8px] text-left">
+                  <div class="flex justify-between items-center bg-white/5 border border-white/5 px-2 py-1 rounded">
+                    <span class="text-white font-mono truncate max-w-[80px]">photo.jpg</span>
+                    <span class="text-gray-400">→</span>
+                    <span class="text-emerald-400 font-bold font-mono">photo.webp</span>
+                  </div>
+                  <div class="flex justify-between items-center bg-white/5 border border-white/5 px-2 py-1 rounded">
+                    <span class="text-white font-mono truncate max-w-[80px]">banner.png</span>
+                    <span class="text-gray-400">→</span>
+                    <span class="text-emerald-400 font-bold font-mono">banner.webp</span>
+                  </div>
+                </div>
+                <div class="flex justify-between items-center text-[9px] text-gray-400 border-t border-white/5 pt-2">
+                  <span>CONVERTED</span>
+                  <span class="text-emerald-400 font-bold">100% SUCCESS</span>
+                </div>
+              </div>
+            </div>
+            <!-- Content -->
+            <div class="p-6">
+              <div class="flex justify-between items-start">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-brand-purple">Desktop App</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="w-4 h-4 text-gray-400 group-hover:text-white transition-colors">
+                  <path
+                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                  <path d="M9 18c-4.51 2-5-2-7-2" />
+                </svg>
+              </div>
+              <h3
+                class="font-display font-bold text-xl text-white mt-1.5 mb-2 group-hover:text-accent-blue transition-colors">
+                KenPix Image Converter</h3>
+              <p class="text-gray-400 text-xs sm:text-sm leading-relaxed mb-4">
+                A desktop application for image conversion that focuses on ease of use, lightweight performance, and a modern design. Powered by Tauri and Rust.
+              </p>
+              <div class="flex items-center gap-4">
+                <span class="text-xs font-medium text-light-sky">Tauri v2</span>
+                <span class="text-xs font-medium text-light-sky">Rust</span>
+                <span class="text-xs font-medium text-light-sky">TypeScript</span>
+                <span class="text-xs font-medium text-light-sky">Modern UX</span>
               </div>
             </div>
           </a>
@@ -806,11 +936,11 @@
               </form>
               <div id="form-feedback"
                 class="hidden mt-4 p-4 rounded-xl text-center text-sm font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-                ✅ Thank you! Your message has been sent successfully.
+                Thank you! Your message has been sent successfully.
               </div>
               <div id="form-error"
                 class="hidden mt-4 p-4 rounded-xl text-center text-sm font-semibold bg-red-500/10 text-red-400 border border-red-500/20">
-                ❌ Oops! Something went wrong. Please try again or contact via GitHub.
+                Oops! Something went wrong. Please try again or contact via GitHub.
               </div>
             </div>
           </div>
@@ -826,21 +956,24 @@
       class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
       <div>
         <a href="#home" class="flex items-center justify-center md:justify-start gap-2.5 group mb-2">
-          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 opacity-80 group-hover:opacity-100 transition-opacity duration-300">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"
+            class="w-7 h-7 opacity-80 group-hover:opacity-100 transition-opacity duration-300">
             <defs>
               <linearGradient id="footerLogoGrad" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stop-color="#4647ae"/>
-                <stop offset="100%" stop-color="#4382df"/>
+                <stop offset="0%" stop-color="#4647ae" />
+                <stop offset="100%" stop-color="#4382df" />
               </linearGradient>
             </defs>
-            <rect width="40" height="40" rx="10" fill="url(#footerLogoGrad)"/>
-            <path d="M10 20 L16 14 L16 16.5 L13 20 L16 23.5 L16 26 Z" fill="white" opacity="0.9"/>
-            <path d="M30 20 L24 14 L24 16.5 L27 20 L24 23.5 L24 26 Z" fill="white" opacity="0.9"/>
-            <line x1="22" y1="13" x2="18" y2="27" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.75"/>
+            <rect width="40" height="40" rx="10" fill="url(#footerLogoGrad)" />
+            <path d="M10 20 L16 14 L16 16.5 L13 20 L16 23.5 L16 26 Z" fill="white" opacity="0.9" />
+            <path d="M30 20 L24 14 L24 16.5 L27 20 L24 23.5 L24 26 Z" fill="white" opacity="0.9" />
+            <line x1="22" y1="13" x2="18" y2="27" stroke="white" stroke-width="2" stroke-linecap="round"
+              opacity="0.75" />
           </svg>
-          <span class="font-display font-extrabold text-lg bg-linear-to-r from-white via-light-sky to-accent-blue bg-clip-text text-transparent">KenVano</span>
+          <span
+            class="font-display font-extrabold text-lg bg-linear-to-r from-white via-light-sky to-accent-blue bg-clip-text text-transparent">KenVano</span>
         </a>
-        <p class="text-xs text-gray-500">© 2026 KenVano. Developed by CandraSP. All rights reserved.</p>
+        <p class="text-xs text-gray-500">Copyright 2026 KenVano. Developed by CandraSP. All rights reserved.</p>
       </div>
 
       <div class="flex gap-6 text-xs text-gray-400">

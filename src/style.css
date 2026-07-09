@@ -89,6 +89,12 @@ body {
   box-shadow: 0 12px 30px -10px rgba(17, 46, 129, 0.5);
 }
 
+/* Help browser skip offscreen sections until needed */
+main > section:not(#home):not(#about) {
+  content-visibility: auto;
+  contain-intrinsic-size: 1000px;
+}
+
 /* Glow Effect */
 .glow-purple {
   filter: drop-shadow(0 0 20px rgba(70, 71, 174, 0.3));

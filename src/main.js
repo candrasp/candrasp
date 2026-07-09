@@ -1,7 +1,9 @@
-// Initialize Lucide Icons
-if (window.lucide) {
-  window.lucide.createIcons();
-}
+// Initialize Lucide Icons after full load so rendered SVGs stay stable
+window.addEventListener('load', () => {
+  if (window.lucide) {
+    window.lucide.createIcons();
+  }
+});
 
 // Mobile Menu Toggle
 const menuBtn = document.getElementById('menu-btn');
